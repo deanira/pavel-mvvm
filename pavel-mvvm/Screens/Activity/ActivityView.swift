@@ -8,19 +8,10 @@
 import SwiftUI
 
 struct ActivityView : View {
-    @EnvironmentObject var trip:Trip
+    @EnvironmentObject var trip: Trip
     @Binding var path: [Screen]
-    let persistenceController = PersistenceController.shared
     @State var showAlert : Bool = false
-    @State var activityList:[Activity] = []
-    @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(
-        sortDescriptors: [],
-        animation: .default)
-    var tripItems: FetchedResults<TripPlans>
-    
     @StateObject private var viewModel = ActivityViewModel()
-    
     
     var body: some View{
         ZStack{
@@ -37,7 +28,7 @@ struct ActivityView : View {
                 Spacer()
                 ScrollView{
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 170))], spacing: 15) {
-                        ForEach(activityList, id: \.self) { activity in
+                        ForEach(viewModel.activityList, id: \.self) { activity in
                             ActivityGrid(activity:activity)
                         }
                     }
@@ -46,7 +37,7 @@ struct ActivityView : View {
                     if trip.TransportationList.isEmpty {
                         showAlert = true
                     } else {
-                        viewModel.addTrip()
+                        viewModel.addTrip(trip: trip)
                         path.append(Screen.HomeScreen)
                     }
                     
@@ -66,12 +57,12 @@ struct ActivityView : View {
             .padding(.horizontal,16)
         }.onAppear(){
             if trip.ActivityListSuggestion.isEmpty{
-                activityList = Activity.content
+                viewModel.activityList = Activity.content
             }else{
                 
                 for item in trip.ActivityListSuggestion{
                     let activity = Activity.content.first(where:{$0.title == item})
-                    activityList.append(activity!)
+                    viewModel.activityList.append(activity!)
                 }
             }
         }
@@ -122,8 +113,8 @@ struct ActivityGrid : View{
     }
 }
 
-struct ActivityView_Previews: PreviewProvider {
-    static var previews: some View {
-        ActivityView()
-    }
-}
+//struct ActivityView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ActivityView()
+//    }
+//}

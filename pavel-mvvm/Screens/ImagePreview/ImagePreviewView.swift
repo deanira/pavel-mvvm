@@ -9,13 +9,16 @@ import SwiftUI
 
 struct ImagePreviewView: View {
     @Binding var path: [Screen]
+    @Binding var imageHasBeenChosen: Bool
+    var imageId = "image2"
+    
+    var image: Image
+    var uiImage: UIImage
     @StateObject private var viewModel = ImagePreviewViewModel()
-    
-    
     
     var body: some View {
         VStack {
-            if viewModel.imageHasBeenChosen {
+            if imageHasBeenChosen {
                 Image(uiImage: viewModel.retrieveImage(with: imageId)!)
                     .resizable()
                     .scaledToFit()
@@ -27,8 +30,7 @@ struct ImagePreviewView: View {
         }.toolbar {
             Button("Save") {
                 viewModel.saveImage(with: imageId, image: uiImage)
-//                fileManager.saveImage(with: imageId, image: uiImage)
-                viewModel.imageHasBeenChosen = true
+                imageHasBeenChosen = true
                 _ = path.popLast()
             }
         }

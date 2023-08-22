@@ -8,6 +8,9 @@
 import Foundation
 
 class DashboardViewModel: ObservableObject {
+    
+    init() {}
+    
     func fetchPastTrip() {
         
     }

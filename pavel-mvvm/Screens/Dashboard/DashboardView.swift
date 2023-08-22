@@ -21,12 +21,11 @@ struct DashboardView: View {
   @State var selectedTab: TabIdentifier = .upcoming
   
   // MARK: PersistenceController
-  let persistenceController = PersistenceController.shared
+    let viewContext = PersistenceController.shared.managedObjectContext
   
-//  // MARK: CoreData
+  // MARK: CoreData
 //  @Environment(\.managedObjectContext) private var viewContext
-//  @FetchRequest(entity: TripPlans.entity(), sortDescriptors: [NSSortDescriptor(key: #keyPath(TripPlans.dateStart), ascending: true)])
-//  private var tripPlans: FetchedResults<TripPlans>
+  @FetchRequest(entity: TripPlans.entity(), sortDescriptors: [NSSortDescriptor(key: #keyPath(TripPlans.dateStart), ascending: true)]) private var tripPlans: FetchedResults<TripPlans>
   
   // MARK: View
   var body: some View {
@@ -66,8 +65,8 @@ struct DashboardView: View {
   }
 }
 
-struct DashboardView_Previews: PreviewProvider {
-    static var previews: some View {
-        DashboardView()
-    }
-}
+//struct DashboardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DashboardView()
+//    }
+//}

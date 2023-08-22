@@ -9,18 +9,13 @@ import Foundation
 import SwiftUI
 
 class ImagePreviewViewModel: ObservableObject {
-    @Binding var imageHasBeenChosen: Bool
-    var fileManager = FileManager()
-    
-    var imageId = "image2"
-    @Published var image: Image? = nil
-    @Published var uiImage: UIImage? = nil
+    private var fileManager = FileManager()
     
     func saveImage(with: String, image: UIImage) {
         fileManager.saveImage(with: with, image: image)
     }
     
-    func retreiveImage(with: String) -> UIImage? {
+    func retrieveImage(with: String) -> UIImage? {
         return fileManager.retrieveImage(with: with)
     }
 }

@@ -6,12 +6,28 @@
 //
 
 import Foundation
+import CoreData
 
 class CreateViewModel: ObservableObject {
+    @Published var webService = CountriesService()
+    @Published var countryNames: [String] = []
     
-    func checkTrip() -> Bool {
+    @Published var countries: [Country] = []
+    @Published var states: [Province] = []
+    @Published var cities: [City] = []
+    
+    
+    let dateFormatter: DateFormatter = {
+        let df = DateFormatter()
+        df.dateFormat = "MMMM d, y"
+        return df
+    }()
+    
+    let viewContext = PersistenceController.shared.managedObjectContext
+    
+    func checkTrip(trip: Trip) -> Bool {
         var data:[TripPlans]
-        let fetchRequest =  NSFetchRequest<TripPlans>(entityName: "TripPlans")
+        let fetchRequest = NSFetchRequest<TripPlans>(entityName: "TripPlans")
         fetchRequest.sortDescriptors = []
         fetchRequest.predicate = NSPredicate(format: "(dateStart <= %@) && (dateEnd >= %@)", dateFormatter.date(from: trip.dateEnd)! as CVarArg , dateFormatter.date(from: trip.dateStart)!  as  CVarArg)
         
@@ -28,5 +44,24 @@ class CreateViewModel: ObservableObject {
             print("Cannot fetch Expenses")
         }
         return false
+    }
+    
+    func populateCountries() async {
+        do {
+            try await webService.populateCountries()
+            self.countries = webService.countries
+        } catch {
+            print("failed to fetch countries")
+        }
+    }
+    
+    func populateStates(country: Country) async {
+        do {
+            try await webService.populateStates(countryCode: country.iso2) { resultStates in
+                self.states = resultStates
+            }
+        } catch {
+            print("failed to fetch countries")
+        }
     }
 }

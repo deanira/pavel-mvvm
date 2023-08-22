@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TransportationScreen : View {
+struct TransportationView : View {
     
     @Binding var path: [Screen]
     @EnvironmentObject var trip: Trip

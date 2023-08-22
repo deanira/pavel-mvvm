@@ -8,6 +8,9 @@
 import Foundation
 
 class TripScoreViewModel: ObservableObject {
+    
+    init() {}
+    
     func countScore() {
         
     }

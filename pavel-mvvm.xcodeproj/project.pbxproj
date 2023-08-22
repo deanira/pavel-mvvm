@@ -18,7 +18,6 @@
 		A72336C52A8C71F100D85BD7 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72336C42A8C71F100D85BD7 /* Trip.swift */; };
 		A72336C72A8C71FA00D85BD7 /* OnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72336C62A8C71FA00D85BD7 /* OnBoarding.swift */; };
 		A72336CC2A8C745500D85BD7 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72336CB2A8C745500D85BD7 /* Screen.swift */; };
-		A72336CE2A8C74AD00D85BD7 /* TripData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72336CD2A8C74AD00D85BD7 /* TripData.swift */; };
 		A72336D02A8C74B700D85BD7 /* OnBoardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72336CF2A8C74B700D85BD7 /* OnBoardingData.swift */; };
 		A72336D22A8C7BB800D85BD7 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72336D12A8C7BB800D85BD7 /* UIColor+Ext.swift */; };
 		A72336D42A8C7BE600D85BD7 /* FileManager+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72336D32A8C7BE600D85BD7 /* FileManager+Ext.swift */; };
@@ -50,6 +49,18 @@
 		A796B97A2A930ECD00684E96 /* Transportation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A796B9792A930ECD00684E96 /* Transportation.swift */; };
 		A796B97C2A930EF000684E96 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A796B97B2A930EF000684E96 /* Activity.swift */; };
 		A796B97E2A9317EA00684E96 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A796B97D2A9317EA00684E96 /* Persistence.swift */; };
+		A796B9812A933CE100684E96 /* PavelModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A796B97F2A933CE100684E96 /* PavelModel.xcdatamodeld */; };
+		A796B9A32A935A2D00684E96 /* UpcomingTripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A796B9A22A935A2D00684E96 /* UpcomingTripCard.swift */; };
+		A796B9A52A935A4200684E96 /* PastTripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A796B9A42A935A4200684E96 /* PastTripCard.swift */; };
+		A796B9AE2A936D4900684E96 /* Categories+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A796B9A62A936D4900684E96 /* Categories+CoreDataClass.swift */; };
+		A796B9AF2A936D4900684E96 /* Categories+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A796B9A72A936D4900684E96 /* Categories+CoreDataProperties.swift */; };
+		A796B9B02A936D4900684E96 /* Documents+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A796B9A82A936D4900684E96 /* Documents+CoreDataClass.swift */; };
+		A796B9B12A936D4900684E96 /* Documents+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A796B9A92A936D4900684E96 /* Documents+CoreDataProperties.swift */; };
+		A796B9B22A936D4900684E96 /* Items+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A796B9AA2A936D4900684E96 /* Items+CoreDataClass.swift */; };
+		A796B9B32A936D4900684E96 /* Items+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A796B9AB2A936D4900684E96 /* Items+CoreDataProperties.swift */; };
+		A796B9B42A936D4900684E96 /* TripPlans+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A796B9AC2A936D4900684E96 /* TripPlans+CoreDataClass.swift */; };
+		A796B9B52A936D4900684E96 /* TripPlans+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A796B9AD2A936D4900684E96 /* TripPlans+CoreDataProperties.swift */; };
+		A7FE105D2A93B9E100195639 /* ItemPerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE105C2A93B9E100195639 /* ItemPerCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,7 +76,6 @@
 		A72336C42A8C71F100D85BD7 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		A72336C62A8C71FA00D85BD7 /* OnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding.swift; sourceTree = "<group>"; };
 		A72336CB2A8C745500D85BD7 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
-		A72336CD2A8C74AD00D85BD7 /* TripData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripData.swift; sourceTree = "<group>"; };
 		A72336CF2A8C74B700D85BD7 /* OnBoardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingData.swift; sourceTree = "<group>"; };
 		A72336D12A8C7BB800D85BD7 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		A72336D32A8C7BE600D85BD7 /* FileManager+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Ext.swift"; sourceTree = "<group>"; };
@@ -97,6 +107,18 @@
 		A796B9792A930ECD00684E96 /* Transportation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transportation.swift; sourceTree = "<group>"; };
 		A796B97B2A930EF000684E96 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		A796B97D2A9317EA00684E96 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		A796B9802A933CE100684E96 /* PavelModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PavelModel.xcdatamodel; sourceTree = "<group>"; };
+		A796B9A22A935A2D00684E96 /* UpcomingTripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTripCard.swift; sourceTree = "<group>"; };
+		A796B9A42A935A4200684E96 /* PastTripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastTripCard.swift; sourceTree = "<group>"; };
+		A796B9A62A936D4900684E96 /* Categories+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Categories+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A796B9A72A936D4900684E96 /* Categories+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Categories+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A796B9A82A936D4900684E96 /* Documents+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Documents+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A796B9A92A936D4900684E96 /* Documents+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Documents+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A796B9AA2A936D4900684E96 /* Items+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Items+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A796B9AB2A936D4900684E96 /* Items+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Items+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A796B9AC2A936D4900684E96 /* TripPlans+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripPlans+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A796B9AD2A936D4900684E96 /* TripPlans+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripPlans+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A7FE105C2A93B9E100195639 /* ItemPerCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPerCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +155,6 @@
 				A72336AE2A8C704700D85BD7 /* Screens */,
 				A723369D2A8C6A6600D85BD7 /* pavel_mvvmApp.swift */,
 				A72336AB2A8C6FA700D85BD7 /* Config.swift */,
-				A796B97D2A9317EA00684E96 /* Persistence.swift */,
 				A72336A12A8C6A6700D85BD7 /* Assets.xcassets */,
 				A72336A32A8C6A6700D85BD7 /* Preview Content */,
 			);
@@ -180,6 +201,16 @@
 		A72336AF2A8C705F00D85BD7 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				A796B9A62A936D4900684E96 /* Categories+CoreDataClass.swift */,
+				A796B9A72A936D4900684E96 /* Categories+CoreDataProperties.swift */,
+				A796B9A82A936D4900684E96 /* Documents+CoreDataClass.swift */,
+				A796B9A92A936D4900684E96 /* Documents+CoreDataProperties.swift */,
+				A796B9AA2A936D4900684E96 /* Items+CoreDataClass.swift */,
+				A796B9AB2A936D4900684E96 /* Items+CoreDataProperties.swift */,
+				A796B9AC2A936D4900684E96 /* TripPlans+CoreDataClass.swift */,
+				A796B9AD2A936D4900684E96 /* TripPlans+CoreDataProperties.swift */,
+				A796B97D2A9317EA00684E96 /* Persistence.swift */,
+				A796B97F2A933CE100684E96 /* PavelModel.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -188,7 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				A72336D72A8C802D00D85BD7 /* CustomViews */,
-				A72336CD2A8C74AD00D85BD7 /* TripData.swift */,
 				A72336CF2A8C74B700D85BD7 /* OnBoardingData.swift */,
 				A72336D12A8C7BB800D85BD7 /* UIColor+Ext.swift */,
 				A72336D32A8C7BE600D85BD7 /* FileManager+Ext.swift */,
@@ -207,6 +237,7 @@
 				A72336C62A8C71FA00D85BD7 /* OnBoarding.swift */,
 				A796B9792A930ECD00684E96 /* Transportation.swift */,
 				A796B97B2A930EF000684E96 /* Activity.swift */,
+				A7FE105C2A93B9E100195639 /* ItemPerCategory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -316,6 +347,8 @@
 			isa = PBXGroup;
 			children = (
 				A72336D82A8D3E0300D85BD7 /* CircleGroup.swift */,
+				A796B9A22A935A2D00684E96 /* UpcomingTripCard.swift */,
+				A796B9A42A935A4200684E96 /* PastTripCard.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -397,35 +430,46 @@
 				A72336ED2A8F035400D85BD7 /* OnBoardingView.swift in Sources */,
 				A723369E2A8C6A6600D85BD7 /* pavel_mvvmApp.swift in Sources */,
 				A72336D42A8C7BE600D85BD7 /* FileManager+Ext.swift in Sources */,
+				A7FE105D2A93B9E100195639 /* ItemPerCategory.swift in Sources */,
 				A72336F92A8F03E000D85BD7 /* CreateViewModel.swift in Sources */,
 				A72336FD2A8F03FC00D85BD7 /* SplashViewModel.swift in Sources */,
 				A72336F32A8F039B00D85BD7 /* ImagePreviewViewModel.swift in Sources */,
 				A723370B2A8F0AB000D85BD7 /* ListScreen.swift in Sources */,
 				A72336BE2A8C71CC00D85BD7 /* City.swift in Sources */,
 				A72336C32A8C71E600D85BD7 /* Province.swift in Sources */,
-				A72336CE2A8C74AD00D85BD7 /* TripData.swift in Sources */,
+				A796B9A32A935A2D00684E96 /* UpcomingTripCard.swift in Sources */,
+				A796B9B22A936D4900684E96 /* Items+CoreDataClass.swift in Sources */,
+				A796B9AE2A936D4900684E96 /* Categories+CoreDataClass.swift in Sources */,
+				A796B9B02A936D4900684E96 /* Documents+CoreDataClass.swift in Sources */,
 				A72336F72A8F03B600D85BD7 /* ActivityViewModel.swift in Sources */,
 				A72336C12A8C71DE00D85BD7 /* Country.swift in Sources */,
 				A72336FF2A8F040A00D85BD7 /* TransportationViewModel.swift in Sources */,
 				A72336EF2A8F035E00D85BD7 /* ImagePreviewView.swift in Sources */,
 				A72336CC2A8C745500D85BD7 /* Screen.swift in Sources */,
 				A796B97E2A9317EA00684E96 /* Persistence.swift in Sources */,
+				A796B9812A933CE100684E96 /* PavelModel.xcdatamodeld in Sources */,
 				A72336D02A8C74B700D85BD7 /* OnBoardingData.swift in Sources */,
 				A72336D62A8C7C4500D85BD7 /* Binding+Ext.swift in Sources */,
 				A72336C52A8C71F100D85BD7 /* Trip.swift in Sources */,
 				A72336E12A8F031C00D85BD7 /* ActivityView.swift in Sources */,
+				A796B9B42A936D4900684E96 /* TripPlans+CoreDataClass.swift in Sources */,
 				A72336F52A8F03A600D85BD7 /* TripScoreViewModel.swift in Sources */,
 				A72336D22A8C7BB800D85BD7 /* UIColor+Ext.swift in Sources */,
 				A72337092A8F0A8100D85BD7 /* DocumentListView.swift in Sources */,
+				A796B9B52A936D4900684E96 /* TripPlans+CoreDataProperties.swift in Sources */,
 				A72336E32A8F032600D85BD7 /* CreateView.swift in Sources */,
 				A72337012A8F041900D85BD7 /* DashboardViewModel.swift in Sources */,
 				A72336E52A8F032E00D85BD7 /* HomeView.swift in Sources */,
+				A796B9B12A936D4900684E96 /* Documents+CoreDataProperties.swift in Sources */,
 				A72336E92A8F034000D85BD7 /* TransportationView.swift in Sources */,
 				A796B97C2A930EF000684E96 /* Activity.swift in Sources */,
+				A796B9AF2A936D4900684E96 /* Categories+CoreDataProperties.swift in Sources */,
 				A796B97A2A930ECD00684E96 /* Transportation.swift in Sources */,
 				A72337072A8F095E00D85BD7 /* UpcomingTripView.swift in Sources */,
 				A72336D92A8D3E0300D85BD7 /* CircleGroup.swift in Sources */,
+				A796B9B32A936D4900684E96 /* Items+CoreDataProperties.swift in Sources */,
 				A796B9782A92FFD700684E96 /* CountriesService.swift in Sources */,
+				A796B9A52A935A4200684E96 /* PastTripCard.swift in Sources */,
 				A72337052A8F094F00D85BD7 /* PastTripView.swift in Sources */,
 				A72336C72A8C71FA00D85BD7 /* OnBoarding.swift in Sources */,
 				A72336DF2A8F031300D85BD7 /* TripScoreView.swift in Sources */,
@@ -631,6 +675,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A796B97F2A933CE100684E96 /* PavelModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A796B9802A933CE100684E96 /* PavelModel.xcdatamodel */,
+			);
+			currentVersion = A796B9802A933CE100684E96 /* PavelModel.xcdatamodel */;
+			path = PavelModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A72336922A8C6A6600D85BD7 /* Project object */;
 }

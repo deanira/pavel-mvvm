@@ -6,9 +6,13 @@
 //
 
 import Foundation
+import CoreData
 
 class ActivityViewModel: ObservableObject {
+    let viewContext = PersistenceController.shared.managedObjectContext
+    @Published var activityList:[Activity] = []
     
+    init() {}
     
     private let dateFormatter: DateFormatter = {
         let df = DateFormatter()
@@ -16,8 +20,8 @@ class ActivityViewModel: ObservableObject {
         return df
     }()
     
-    func addTrip(){
-        let newTrip = TripPlans(context:viewContext)
+    func addTrip(trip: Trip){
+        let newTrip = TripPlans(context: viewContext)
         newTrip.id = UUID()
         newTrip.title = trip.title
         newTrip.origin = trip.origin
@@ -35,7 +39,7 @@ class ActivityViewModel: ObservableObject {
             newCategory.isWinter = false
             
             
-            let arrFilter =  itemPerCategoryModel.content.filter{item in
+            let arrFilter =  ItemPerCategory.content.filter { item in
                 return item.category == category.title
             }
             
@@ -59,7 +63,7 @@ class ActivityViewModel: ObservableObject {
             newCategory.icon = category.image
             newCategory.isWinter = false
             
-            let arrFilter =  itemPerCategoryModel.content.filter{item in
+            let arrFilter =  ItemPerCategory.content.filter { item in
                 return item.category == category.title
             }
             

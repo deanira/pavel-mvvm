@@ -24,7 +24,6 @@ struct DocumentList: View {
     init (id: String = "", path: Binding<[Screen]>) {
         let request: NSFetchRequest<TripPlans> = TripPlans.fetchRequest()
         request.predicate = NSPredicate(format: "id == %@ ",UUID(uuidString: id)! as CVarArg)
-        //        let sort = NSSortDescriptor()
         request.sortDescriptors = []
         _tripPlans = FetchRequest(fetchRequest: request, animation: .default)
         
@@ -72,7 +71,6 @@ struct DocumentList: View {
                                         if imageHasBeenChosen {
                                             path.append(Screen.ImagePreviewScreen(image!, uiImage!, $imageHasBeenChosen))
                                         } else {
-                                            //                                            self.showActionSheet = true
                                             self.showImagePicker = true
                                         }
                                     } label: {
@@ -108,151 +106,10 @@ struct DocumentList: View {
                     }
                     .padding(.vertical, 8).padding(.horizontal)
                     .background(Color.white).cornerRadius(8)
-                    
-                    //                    DisclosureGroup {
-                    //                        VStack {
-                    //                            if isResult {
-                    //                                ScrollView(.horizontal) {
-                    //                                    HStack {
-                    //                                        ForEach(1..<4) { item in
-                    //                                            ItemDocumentResult()
-                    //                                                .padding(4)
-                    //                                                .shadow(color: .black.opacity(0.2), radius: 3, x: 0, y: 1)
-                    //                                        }
-                    //                                    }
-                    //                                }
-                    //                            } else {
-                    //                                ForEach(1..<4) { item in
-                    //                                    ItemDocument(item: item)
-                    //                                        .padding(.bottom, item != 4 ? 16 : 0)
-                    //                                }
-                    //
-                    //                                HStack {
-                    //                                    Image(systemName: "plus")
-                    //                                        .foregroundColor(Color(UIColor.pavel.red))
-                    //                                    TextField("Add document title", text: $newDocumentTitle)
-                    //                                    Spacer()
-                    //
-                    //                                    Button {
-                    //                                        if imageHasBeenChosen {
-                    //                                            path.append(Screen.ImagePreviewScreen(image!, uiImage!, $imageHasBeenChosen))
-                    //                                        } else {
-                    //                                            self.showActionSheet = true
-                    //                                        }
-                    //                                    } label: {
-                    //                                        HStack(spacing: 4) {
-                    //                                            if !imageHasBeenChosen {
-                    //                                                Image(systemName: "square.and.arrow.up")
-                    //                                            }
-                    //                                            Text(imageHasBeenChosen ? "See File" : "Upload File")
-                    //                                            if imageHasBeenChosen {
-                    //                                                Image(systemName: "chevron.right")
-                    //                                            }
-                    //                                        }
-                    //                                        .padding(.vertical, 4)
-                    //                                        .padding(.horizontal, 8)
-                    //                                        .background(
-                    //                                            RoundedRectangle(cornerRadius: 4)
-                    //                                                .foregroundColor(Color(UIColor.systemGray6))
-                    //                                        )
-                    //                                        .font(.caption)
-                    //                                        .foregroundColor(Color(UIColor.pavel.red))
-                    //                                    }
-                    //                                }
-                    //
-                    //                            }
-                    //                        }
-                    //                        .padding(.vertical, 16)
-                    //                        .padding(.horizontal, 4)
-                    //                    } label: {
-                    //                        Text("🏨  Hotel")
-                    //                            .foregroundColor(Color(UIColor.pavel.darkGray))
-                    //                            .font(.title2)
-                    //                            .fontWeight(.bold)
-                    //                    }
-                    //                    .padding(.vertical, 8).padding(.horizontal)
-                    //                    .background(Color.white).cornerRadius(8)
-                    //
-                    //                    DisclosureGroup {
-                    //                        VStack {
-                    //                            if isResult {
-                    //                                ScrollView(.horizontal) {
-                    //                                    HStack {
-                    //                                        ForEach(1..<4) { item in
-                    //                                            ItemDocumentResult()
-                    //                                                .padding(4)
-                    //                                                .shadow(color: .black.opacity(0.2), radius: 3, x: 0, y: 1)
-                    //                                        }
-                    //                                    }
-                    //                                }
-                    //                            } else {
-                    //                                ForEach(1..<4) { item in
-                    //                                    ItemDocument(item: item)
-                    //                                        .padding(.bottom, item != 4 ? 16 : 0)
-                    //                                }
-                    //
-                    //                                ForEach(tripPlans.first!.DocumentsArray) { item in
-                    //                                    Text(item.title!)
-                    //                                }
-                    //                                HStack {
-                    //                                    Image(systemName: "plus")
-                    //                                        .foregroundColor(Color(UIColor.pavel.red))
-                    //                                    TextField("Add document title", text: $newDocumentTitle)
-                    //                                    Spacer()
-                    //
-                    //                                    Button {
-                    //                                        if imageHasBeenChosen {
-                    //                                            path.append(Screen.ImagePreviewScreen(image!, uiImage!, $imageHasBeenChosen))
-                    //                                        } else {
-                    //                                            self.showActionSheet = true
-                    //                                        }
-                    //                                    } label: {
-                    //                                        HStack(spacing: 4) {
-                    //                                            if !imageHasBeenChosen {
-                    //                                                Image(systemName: "square.and.arrow.up")
-                    //                                            }
-                    //                                            Text(imageHasBeenChosen ? "See File" : "Upload File 2")
-                    //                                            if imageHasBeenChosen {
-                    //                                                Image(systemName: "chevron.right")
-                    //                                            }
-                    //                                        }
-                    //                                        .padding(.vertical, 4)
-                    //                                        .padding(.horizontal, 8)
-                    //                                        .background(
-                    //                                            RoundedRectangle(cornerRadius: 4)
-                    //                                                .foregroundColor(Color(UIColor.systemGray6))
-                    //                                        )
-                    //                                        .font(.caption)
-                    //                                        .foregroundColor(Color(UIColor.pavel.red))
-                    //                                    }
-                    //                                }
-                    //
-                    //                            }
-                    //                        }
-                    //                        .padding(.vertical, 16)
-                    //                        .padding(.horizontal, 4)
-                    //                    } label: {
-                    //                        Text("🎫  Entrance Ticket")
-                    //                            .foregroundColor(Color(UIColor.pavel.darkGray))
-                    //                            .font(.title2)
-                    //                            .fontWeight(.bold)
-                    //                    }
-                    //                    .padding(.vertical, 8).padding(.horizontal)
-                    //                    .background(Color.white).cornerRadius(8)
-                    
                 }
-                //            .disclosureGroupStyle(ListScreenDisclosureGroupStyle())
-                //                .padding(.horizontal, 16)
             }
             .padding(.all, 24)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-            //            .actionSheet(isPresented: $showActionSheet) {
-            //                ActionSheet(title: Text("Select Photo"), buttons: [
-            //                    .default(Text("Take Photo"), action: { self.showImagePicker = true }),
-            //                    .default(Text("Choose Photo"), action: { self.showImagePicker = true }),
-            //                    .cancel(Text("Cancel"))
-            //                ])
-            //            }
             .sheet(isPresented: $showImagePicker, onDismiss: loadImage) {
                 ImagePicker(image: self.$image, uiImage: self.$uiImage, showImagePicker: self.$showImagePicker)
             }.onAppear(){
@@ -393,8 +250,8 @@ struct Checkbox: View {
     }
 }
 
-struct DocumentListView_Previews: PreviewProvider {
-    static var previews: some View {
-        DocumentListView()
-    }
-}
+//struct DocumentListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DocumentListView()
+//    }
+//}

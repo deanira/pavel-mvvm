@@ -23,7 +23,7 @@ struct HomeView: View {
     var body: some View {
         print("Draw HomeScreen body")
         return NavigationStack(path: $path) {
-            SplashScreen(path: $path)
+            SplashView(path: $path)
                 .environmentObject(trip)
                 .navigationDestination(for: Screen.self) { screen in
                     switch screen {
@@ -34,7 +34,7 @@ struct HomeView: View {
                           .environmentObject(trip)
                           .environment(\.managedObjectContext, persistenceController.container.viewContext)
                     case .TransportationScreen:
-                        TransportationScreen(path: $path)
+                        TransportationView(path: $path)
                             .environmentObject(trip)
                     case .ActivityScreen:
                         ActivityView(path: $path)
@@ -47,13 +47,12 @@ struct HomeView: View {
                     case .ImagePreviewScreen(let image, let uiImage, let imageHasBeenChosen):
                         ImagePreviewView(path: $path, imageHasBeenChosen: imageHasBeenChosen, image: image, uiImage: uiImage)
                     default:
-                        DocumentList( id: "D2566D93-ABBF-41C3-9C37-92AEB4A99761", path: $path)
+                        DocumentList(id: "D2566D93-ABBF-41C3-9C37-92AEB4A99761", path: $path)
                             .environmentObject(trip)
                             .environment(\.managedObjectContext, persistenceController.container.viewContext)
                     }
                 }
         }
-        
     }
 }
 

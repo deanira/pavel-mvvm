@@ -16,7 +16,6 @@ struct OnBoardingView: View {
     @Binding var path: [Screen]
     @State var selection = 0
     @State private var imageOffset: CGSize = .zero
-//    @State var content = OnBoardingData.getOnBoarding()
     
     @StateObject private var viewModel = OnBoardingViewModel()
     

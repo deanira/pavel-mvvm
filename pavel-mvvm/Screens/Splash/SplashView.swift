@@ -8,7 +8,7 @@
 import SwiftUI
 import SceneKit
 
-struct SplashScreen: View {
+struct SplashView: View {
   
   // MARK: Properties
   @Binding var path: [Screen]
